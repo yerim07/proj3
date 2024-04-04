@@ -7,7 +7,6 @@ import Editor from "../components/Editor";
 import { useContext, useEffect } from "react";
 import { setPageTitle } from "../util";
 
-
 const Edit = () => {
   const { onDelete, onUpdate } = useContext(DiaryDispatchContext);
   const { id } = useParams();
@@ -16,7 +15,7 @@ const Edit = () => {
 
   useEffect(() => {
     setPageTitle(`${id}번 일기 수정하기`);
-  }, []);
+  });
 
   const goBack = () => {
     navigate(-1);
