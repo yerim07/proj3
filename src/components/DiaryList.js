@@ -9,7 +9,7 @@ const sortOptionList = [
   { value: "oldest", name: "오래된 순" },
 ];
 
-const DiaryList = ({ data }) => {
+const DiaryList = ({ data, contentNumber, contentName }) => {
   const navigate = useNavigate();
   const [sortType, setSortType] = useState("latest");
   const [sortedData, setSortedData] = useState([]);
@@ -49,14 +49,19 @@ const DiaryList = ({ data }) => {
         <div className="right_col">
           <Button
             type={"positive"}
-            text={"새 일기 쓰기"}
+            text={"신규회원등록"}
             onClick={onClickNew}
           />
         </div>
       </div>
       <div className="list_wrapper">
         {sortedData.map((it) => (
-          <DiaryItem key={it.id} {...it} />
+          <DiaryItem
+            key={it.id}
+            {...it}
+            contentName={it.contentName}
+            contentNumber={it.contentNumber}
+          />
         ))}
       </div>
     </div>

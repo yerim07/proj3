@@ -14,7 +14,7 @@ const Edit = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setPageTitle(`${id}번 일기 수정하기`);
+    setPageTitle(`회원정보수정`);
   });
 
   const goBack = () => {
@@ -22,16 +22,16 @@ const Edit = () => {
   };
 
   const onClickDelete = () => {
-    if (window.confirm("일기를 정말 삭제할까요? 다시 복구되지 않아요!")) {
+    if (window.confirm("회원정보를 정말 삭제할까요? 다시 복구되지 않아요!")) {
       onDelete(id);
       navigate("/", { replace: true });
     }
   };
 
   const onSubmit = (data) => {
-    if (window.confirm("일기를 정말 수정할까요?")) {
-      const { date, content, emotionId } = data;
-      onUpdate(id, date, content, emotionId);
+    if (window.confirm("회원정보를 수정할까요?")) {
+      const { date, contentNumber, contentName, emotionId } = data;
+      onUpdate(id, date, contentNumber, contentName, emotionId);
       navigate("/", { replace: true });
     }
   };
@@ -42,12 +42,12 @@ const Edit = () => {
     return (
       <div>
         <Header
-          title={"일기 수정하기"}
+          title={"회원정보수정"}
           leftChild={<Button text={"< 뒤로 가기"} onClick={goBack} />}
           rightChild={
             <Button
               type={"negative"}
-              text={"삭제하기"}
+              text={"회원삭제"}
               onClick={onClickDelete}
             />
           }

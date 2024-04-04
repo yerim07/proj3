@@ -8,7 +8,7 @@ const Viewer = ({ content, emotionId }) => {
   return (
     <div className="Viewer">
       <section>
-        <h4>오늘의 감정</h4>
+        <h4>회원등급</h4>
         <div
           className={[
             "emotion_img_wrapper",
@@ -20,7 +20,7 @@ const Viewer = ({ content, emotionId }) => {
         </div>
       </section>
       <section>
-        <h4>오늘의 일기</h4>
+        <h4>회원정보</h4>
         <div className="content_wrapper">
           <p>{content}</p>
         </div>

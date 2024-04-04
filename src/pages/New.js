@@ -11,7 +11,7 @@ const New = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setPageTitle("새 일기 쓰기");
+    setPageTitle("신규회원등록");
   }, []);
 
   const goBack = () => {
@@ -19,15 +19,15 @@ const New = () => {
   };
 
   const onSubmit = (data) => {
-    const { date, content, emotionId } = data;
-    onCreate(date, content, emotionId);
+    const { date, contentNumber, contentName, emotionId } = data;
+    onCreate(date, contentNumber, contentName, emotionId);
     navigate("/", { replace: true });
   };
 
   return (
     <div>
       <Header
-        title={"새 일기 쓰기"}
+        title={"신규회원등록"}
         leftChild={<Button text={"< 뒤로 가기"} onClick={goBack} />}
       />
       <Editor onSubmit={onSubmit} />

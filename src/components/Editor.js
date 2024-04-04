@@ -10,7 +10,8 @@ const Editor = ({ initData, onSubmit }) => {
   const [state, setState] = useState({
     date: getFormattedDate(new Date()),
     emotionId: 3,
-    content: "",
+    contentName: "",
+    contentNumber: "",
   });
 
   useEffect(() => {
@@ -29,10 +30,17 @@ const Editor = ({ initData, onSubmit }) => {
     });
   };
 
-  const handleChangeContent = (e) => {
+  const handleChangeContentName = (e) => {
     setState({
       ...state,
-      content: e.target.value,
+      contentName: e.target.value,
+    });
+  };
+
+  const handleChangeContentNumber = (e) => {
+    setState({
+      ...state,
+      contentNumber: e.target.value,
     });
   };
 
@@ -53,12 +61,12 @@ const Editor = ({ initData, onSubmit }) => {
 
   return (
     <div className="Editor">
-      <h4>오늘의 날짜</h4>
+      <h4>회원가입일</h4>
       <div className="input_wrapper">
         <input type="date" value={state.date} onChange={handleChangeDate} />
       </div>
       <div className="editor_section">
-        <h4>오늘의 감정</h4>
+        <h4>회원등급</h4>
         <div className="input_wrapper emotion_list_wrapper">
           {emotionList.map((it) => (
             <EmotionItem
@@ -71,19 +79,24 @@ const Editor = ({ initData, onSubmit }) => {
         </div>
       </div>
       <div className="editor_section">
-        <h4>오늘의 일기</h4>
+        <h4>회원 이름</h4>
         <div className="input_wrapper">
-          <textarea
-            placeholder="오늘은 어땠나요?"
-            value={state.content}
-            onChange={handleChangeContent}
+          <input value={state.contentName} onChange={handleChangeContentName} />
+        </div>
+      </div>
+      <div className="editor_section">
+        <h4>회원 번호</h4>
+        <div className="input_wrapper">
+          <input
+            value={state.contentNumber}
+            onChange={handleChangeContentNumber}
           />
         </div>
       </div>
 
       <div className="editor_section bottom_section">
         <Button text={"취소하기"} onClick={handleOnGoBack} />
-        <Button text={"작성 완료"} type={"positive"} onClick={handleSubmit} />
+        <Button text={"수정하기"} type={"positive"} onClick={handleSubmit} />
       </div>
     </div>
   );

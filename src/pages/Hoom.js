@@ -14,7 +14,7 @@ const Home = () => {
   const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
-    setPageTitle("Winterlood의 감정 일기장");
+    setPageTitle("회원가입");
   }, []);
 
   useEffect(() => {

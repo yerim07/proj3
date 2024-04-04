@@ -1,5 +1,5 @@
 import React, { useReducer, useRef, useEffect, useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Hoom";
 import New from "./pages/New";
@@ -62,26 +62,28 @@ function App() {
     setIsDataLoaded(true);
   }, []);
 
-  const onCreate = (date, content, emotionId) => {
+  const onCreate = (date, contentNumber, contentName, emotionId) => {
     dispatch({
       type: "CREATE",
       data: {
         id: idRef.current,
         date: new Date(date).getTime(),
-        content,
+        contentNumber,
+        contentName,
         emotionId,
       },
     });
     idRef.current += 1;
   };
 
-  const onUpdate = (targetId, date, content, emotionId) => {
+  const onUpdate = (targetId, date, contentNumber, contentName, emotionId) => {
     dispatch({
       type: "UPDATE",
       data: {
         id: targetId,
         date: new Date(date).getTime(),
-        content,
+        contentNumber,
+        contentName,
         emotionId,
       },
     });
