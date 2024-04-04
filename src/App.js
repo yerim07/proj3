@@ -1,11 +1,11 @@
 import React, { useReducer, useRef, useEffect, useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
-import Home from "./pages/Home";
+import Home from "./pages/Hoom";
 import New from "./pages/New";
 import Diary from "./pages/Diary";
 import Edit from "./pages/Edit";
-s;
+
 function reducer(state, action) {
   switch (action.type) {
     case "INIT": {

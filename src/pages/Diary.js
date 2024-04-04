@@ -1,9 +1,9 @@
 import { useNavigate, useParams } from "react-router-dom";
-import Button from "../component/Button";
-import Header from "../component/Header";
+import Button from "../components/Button";
+import Header from "../components/Header";
 import useDiary from "../hooks/useDiary";
 import { getFormattedDate } from "../util";
-import Viewer from "../component/Viewer";
+import Viewer from "../components/Viewer";
 import { useEffect } from "react";
 import { setPageTitle } from "../util";
 
