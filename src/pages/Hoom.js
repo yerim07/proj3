@@ -1,8 +1,8 @@
 import { useState, useContext, useEffect } from "react";
 import { DiaryStateContext } from "../App";
-import Button from "../components/Button";
-import Header from "../components/Header";
-import DiaryList from "../components/DiaryList";
+import Button from "../component/Button";
+import Header from "../component/Header";
+import DiaryList from "../component/DiaryList";
 import { getMonthRangeByDate, setPageTitle } from "../util";
 
 const Home = () => {

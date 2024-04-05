@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import Button from "../components/Button";
-import Header from "../components/Header";
-import Editor from "../components/Editor";
+import Button from "../component/Button";
+import Header from "../component/Header";
+import Editor from "../component/Editor";
 import { DiaryDispatchContext } from "../App";
 import { useContext, useEffect } from "react";
 import { setPageTitle } from "../util";

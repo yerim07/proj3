@@ -1,9 +1,9 @@
 import { DiaryDispatchContext } from "../App";
 import { useNavigate, useParams } from "react-router-dom";
 import useDiary from "../hooks/useDiary";
-import Button from "../components/Button";
-import Header from "../components/Header";
-import Editor from "../components/Editor";
+import Button from "../component/Button";
+import Header from "../component/Header";
+import Editor from "../component/Editor";
 import { useContext, useEffect } from "react";
 import { setPageTitle } from "../util";
 

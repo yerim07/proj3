@@ -1,3 +1,6 @@
+.Editor {
+}
+
 .Editor .editor_section {
   margin-bottom: 40px;
 }
@@ -24,8 +27,9 @@ textarea {
 }
 
 .Editor textarea {
-  width: 500px;
-  height: 10px;
+  width: 100%;
+  min-height: 200px;
+  box-sizing: border-box;
   resize: vertical;
 }
 
