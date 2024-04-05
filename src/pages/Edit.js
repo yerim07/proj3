@@ -15,7 +15,7 @@ const Edit = () => {
 
   useEffect(() => {
     setPageTitle(`${id}번 일기 수정하기`);
-  });
+  }, []);
 
   const goBack = () => {
     navigate(-1);

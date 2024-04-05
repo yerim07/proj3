@@ -1,5 +1,5 @@
 import React, { useReducer, useRef, useEffect, useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Hoom";
 import New from "./pages/New";
